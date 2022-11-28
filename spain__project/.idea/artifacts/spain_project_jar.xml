@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="spain_project:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/spain_project_jar</output-path>
+    <root id="archive" name="spain_project.jar">
+      <element id="module-output" name="spain_project" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/WorldCup2022.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.10/gson-2.10.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
