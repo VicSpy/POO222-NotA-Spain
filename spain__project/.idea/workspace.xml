@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="spain_project:jar" />
+      <artifact name="spain__project:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="515944c7-bc59-4320-ac82-527efe8638b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../spain_project" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spain__project.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,20 +38,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/bruno/Downloads/WorldCup2022.jar",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bruno/Downloads/WorldCup2022.jar&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\bruno.ferrari\POO222-NotA-Spain\spain_project\src\main\resources" />
@@ -74,7 +74,7 @@
     </configuration>
     <configuration name="module_spain.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="module_spain.App" />
-      <module name="spain_project" />
+      <module name="spain__project" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="module_spain.*" />
@@ -107,7 +107,10 @@
       <workItem from="1669159249132" duration="777000" />
       <workItem from="1669327669817" duration="20201000" />
       <workItem from="1669673387507" duration="1185000" />
-      <workItem from="1669675487547" duration="68000" />
+      <workItem from="1669675487547" duration="695000" />
+      <workItem from="1669769890317" duration="596000" />
+      <workItem from="1669843634211" duration="626000" />
+      <workItem from="1670291539656" duration="2362000" />
     </task>
     <servers />
   </component>
@@ -124,5 +127,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/module_spain/App.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

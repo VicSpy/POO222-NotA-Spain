@@ -16,7 +16,7 @@ public class SpainDAO {
     private List<TechnicalCommittee> technicalCommittees = new ArrayList<>();
 
     private SpainDAO() {
-        players.add(new Player("Unai Simón", 23, "Simón", 190.0 , 88.0,
+        players.add(new Player("Unai Simón", 1, "Simón", 190.0 , 88.0,
                 LocalDate.of(1997, 11, 6), "Goalkeeper", "Athletic Bilbao"));
 
         players.add(new Player("Dani Carvajal", 20, "Carvajal", 173.0 , 74.0,

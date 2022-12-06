@@ -14,8 +14,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.Comparator;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
@@ -27,9 +31,6 @@ public class Spain implements NationalTeamInfos {
     private SpainStats spainStats = new SpainStats();
 
     private SpainDAO spainDAO;
-
-    public Spain() {
-    }
 
     public SpainDAO getSpainDAO() {
         if (spainDAO == null) {
@@ -43,10 +44,6 @@ public class Spain implements NationalTeamInfos {
         return (int) ChronoUnit.YEARS.between(birthDate, LocalDate.now());
     }
 
-    private IntStream getAgePlayerStream() {
-        return getSpainDAO().getPlayers().stream().mapToInt(p -> getAgeByBirthDate(p.getBirthDate()));
-    }
-
     @Override
     public int getHowManyMembers() {
         spainStats.addMethodCall();
@@ -56,19 +53,26 @@ public class Spain implements NationalTeamInfos {
     @Override
     public int getOldestPlayer() {
         spainStats.addMethodCall();
-        return getAgePlayerStream().max().orElse(0);
+        Optional<Player> player = getSpainDAO().getPlayers().stream().sorted((o1, o2) -> Integer.compare(getAgeByBirthDate(o2.getBirthDate()), getAgeByBirthDate(o1.getBirthDate()))).findFirst();
+        return player.map(Player::getNumber).orElse(0);
     }
 
     @Override
     public int getYoungestPlayer() {
         spainStats.addMethodCall();
-        return getAgePlayerStream().min().orElse(0);
+        Optional<Player> player = getSpainDAO().getPlayers().stream().sorted(Comparator.comparingInt(p -> getAgeByBirthDate(p.getBirthDate()))).findFirst();
+        return player.map(Player::getNumber).orElse(0);
     }
 
     @Override
     public double getAverageAge() {
         spainStats.addMethodCall();
-        return getSpainDAO().getPlayers().stream().mapToInt(p -> getAgeByBirthDate(p.getBirthDate())).average().orElse(0);
+
+        Locale.setDefault(Locale.US);
+
+        DecimalFormat fmt = new DecimalFormat("0.00");
+        double averageAge = getSpainDAO().getPlayers().stream().mapToInt(p -> getAgeByBirthDate(p.getBirthDate())).average().orElse(0);
+        return Double.parseDouble(fmt.format(averageAge));
     }
 
     @Override
